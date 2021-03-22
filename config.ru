@@ -1,4 +1,7 @@
 require './config/environment'
 
-#use other application controllers
+#remember to USE all other controllers here dumbass!
+use UserController
+use GuitarController
+use SessionController
 run ApplicationController

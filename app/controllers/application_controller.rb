@@ -1,4 +1,4 @@
-require './config/environment'
+# require './config/environment'
 
 class ApplicationController < Sinatra::Base
 
@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
     enable :sessions
-    set :session_secret, "#dotenv gem from lecture"
+    set :session_secret, "dot env gem"
   end
 
   get "/" do
@@ -14,11 +14,11 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/home' do
-    erb :index
+    
   end
-
-  get '/login' do
-    erb :welcome
+  
+  helpers do
+    
   end
 
 end
