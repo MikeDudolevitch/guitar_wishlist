@@ -14,7 +14,7 @@ ActiveRecord::Schema.define(version: 2021_03_21_073758) do
 
   create_table "guitars", force: :cascade do |t|
     t.string "maker"
-    t.string "model_name"
+    t.string "model"
     t.string "color"
     t.integer "year_created"
     t.string "image_url"

@@ -1,8 +1,10 @@
-#make sign in form in html
-<h1>Please Sign In!</h1>
+<h3>Welcome to the Guitar Wishlist App! Please create an account or sign in to start saving your dream guitars!</h3>
 <form action="/login" method="post">
-    <input type="email" name="user[email]" placeholder="email"><br>
-    <input type="password" name="user[password]" placeholder="password"><br>
-    # <input type="password" name="user[password_confirmation]" placeholder="password confirmation"><br>
-    <input type="submit" value="Create Account">
+    <input type="email" name="email" placeholder="email">
+    <br>
+    <input type="password" name="password" placeholder="password">
+    <br>
+    <input type="submit" value="Sign In">
+    <br>
+    <a href="/signup">Create Account</a> 
 </form>

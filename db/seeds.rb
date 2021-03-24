@@ -1,0 +1,2 @@
+Guitar.create(maker: "jgdjfa", model: "sdnjasfjps", color: "dsadsds", year_created: 123, image_url: "fdfasd")
+Guitar.create(maker: "jgdjfa", model: "sdnjasfjps", color: "dsadsds", year_created: 123, image_url: "fdfasd")
