@@ -13,13 +13,14 @@ class SessionController < ApplicationController
         user = User.find_by(email: params[:email])
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
-            redirect '/guitar'
+            redirect '/guitars'
         else 
             redirect '/login'
         end
     end
 
-    delete 'logout' do 
-    #logout a user
+    delete '/logout' do 
+        session.clear
     end
+
 end

@@ -1,14 +1,13 @@
-<ul>
-<% @guitars.each do |guitar| %>
-    <li> 
-    <a href="/guitar/<% guitar.id%>"><%= guitar.maker %></a>
-    <a href="/guitar/<% guitar.id%>"><%= guitar.model %></a>
-    <a href="/guitar/<% guitar.id%>"><%= guitar.color %></a>
-    <a href="/guitar/<% guitar.id%>"><%= guitar.year_created %></a>
-    <a href="/guitar/<% guitar.id%>"><%= guitar.image_url %></a>
-    </li>
-    <% end %>
-    <br>
-    <br>
-    <a href="/guitar/new">Create New Guitar</a>
+    <ul>
+    <li><%= @guitar.maker.capitalize %></li>
+    <li><%= @guitar.model.capitalize %></li>
+    <li><%= @guitar.color.capitalize %></li>
+    <li><%= @guitar.year_created %></li>
+    <img src=<%= @guitar.image_url %> alt="guitar image">
     </ul>
+    <a href="/guitars"> "Back To Guitars" </a> 
+
+    <form action="/guitars/<%= @guitar.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+    </form>

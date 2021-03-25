@@ -1,19 +1,17 @@
-<h2>Fill Out As Many Fields As You Would Like To Save A Guitar To Your Profile!</h2>
-<br>
-<form action="/guitars/new" method="post">
-    <input type="text" name="maker" placeholder="manufacturer"> 
+<h1>Check Out Your Axes!</h1>
+<ul>
+<% @guitars.each do |guitar| %>
+     
+    <li><%= guitar.maker %></li>
+    <li><%= guitar.model %></li>
+    <li><%= guitar.color %></li>
+    <li><%= guitar.year_created %></li>
+    <img src=<%= guitar.image_url %> alt="guitar image">
+    
+    <a href="/guitars/<%=guitar.id%>/edit">Edit Guitar</a>
+    <% end %>
+    </ul>
     <br>
-    <input type="text" name="model_name" placeholder="model"> 
     <br>
-    <input type="text" name="color" placeholder="color">
+    <a href="/guitars/new">Create New Guitar</a>
     <br>
-    <input type="integer" name="year_created" placeholder="year">
-    <br>
-    <input type="text" name="image_url" placeholder="photo url">
-    <br>
-    <form action="/guitars/new" method="post">
-    <br>
-    <input type="submit" value="Add to Wishlist">
-    </form>
-
-</form>

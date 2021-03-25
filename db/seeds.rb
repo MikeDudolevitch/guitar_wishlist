@@ -1,2 +1,2 @@
-Guitar.create(maker: "jgdjfa", model: "sdnjasfjps", color: "dsadsds", year_created: 123, image_url: "fdfasd")
-Guitar.create(maker: "jgdjfa", model: "sdnjasfjps", color: "dsadsds", year_created: 123, image_url: "fdfasd")
+Guitar.create(maker: "Fender", model: "Stratocaster", color: "Red", year_created: 1967, image_url: "https://images.reverb.com/image/upload/s--qO_0IgHP--/f_auto,t_supersize/v1616256580/dpj4yprfm2grzlkpmjiw.jpg")
+Guitar.create(maker: "Cara", model: "10th Avenue", color: "Natural", year_created: 2017, image_url: "https://www.premierguitar.com/ext/resources/images/content/2016_12/LNU/Dec16_LNU_CaraGuitars_10thAve_WEB.jpg")

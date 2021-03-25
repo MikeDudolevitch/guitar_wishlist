@@ -1,1 +1,18 @@
-<h1>Sup </h2>
+<h2>Edit Your Guitar!</h2>
+<br>
+<form action="/guitars/<%=@guitar.id%>" method="post">
+    <input type="hidden" name="_method" value="patch">
+    <input type="text" name="maker" value="<%= @guitar.maker %>"> 
+    <br>
+    <input type="text" name="model" value="<%= @guitar.model %>"> 
+    <br>
+    <input type="text" name="color" value="<%= @guitar.color %>">
+    <br>
+    <input type="integer" name="year_created" value="<%= @guitar.year_created %>">
+    <br>
+    <input type="text" name="image_url" value="<%= @guitar.image_url %>">
+    <br>
+    <br>
+    <input type="submit" value="Edit">
+
+</form>
