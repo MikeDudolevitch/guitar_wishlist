@@ -14,5 +14,8 @@
     <br>
     <br>
     <input type="submit" value="Edit">
-
-</form>
+    </form>
+    <form action="/guitars/<%= @guitar.id%>" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+    </form>

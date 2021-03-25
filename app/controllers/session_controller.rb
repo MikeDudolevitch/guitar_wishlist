@@ -1,26 +1,26 @@
 class SessionController < ApplicationController
 
-    #login route form
-    #login route POST
-    #logout route
-    
     get '/login' do
+        redirect_if_already_logged_in
         erb :login
     end
 
     post '/login' do
-        #find user- if authenticated redirect to main route, else /login w/ message
+        redirect_if_already_logged_in
         user = User.find_by(email: params[:email])
         if user && user.authenticate(params[:password])
             session[:user_id] = user.id
             redirect '/guitars'
         else 
+            #
             redirect '/login'
         end
     end
 
-    delete '/logout' do 
+    delete '/logout' do
+        redirect_if_not_logged_in
         session.clear
+        redirect '/login'
     end
 
 end

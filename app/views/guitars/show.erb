@@ -5,7 +5,7 @@
     <li><%= @guitar.year_created %></li>
     <img src=<%= @guitar.image_url %> alt="guitar image">
     </ul>
-    <a href="/guitars"> "Back To Guitars" </a> 
+    <a href="/guitars"> Back To Guitars </a> 
 
     <form action="/guitars/<%= @guitar.id%>" method="post">
     <input type="hidden" name="_method" value="delete">

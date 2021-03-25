@@ -1,12 +1,16 @@
-<h1>Check Out Your Axes!</h1>
+<link rel="stylesheet" href="/stylesheets/main.css" />
+<body>
+<% if @guitars.count < 1%><h1>Create Your First Guitar!</h1>
+<% else%><h1>Check Out Your Axes!</h1>
+<% end %>
 <ul>
 <% @guitars.each do |guitar| %>
      
-    <li><%= guitar.maker %></li>
-    <li><%= guitar.model %></li>
-    <li><%= guitar.color %></li>
+    <li><%= guitar.maker.capitalize %></li>
+    <li><%= guitar.model.capitalize %></li>
+    <li><%= guitar.color.capitalize %></li>
     <li><%= guitar.year_created %></li>
-    <img src=<%= guitar.image_url %> alt="guitar image">
+    <img class="image600" src=<%= guitar.image_url %> alt="guitar image">
     
     <a href="/guitars/<%=guitar.id%>/edit">Edit Guitar</a>
     <% end %>
@@ -15,3 +19,4 @@
     <br>
     <a href="/guitars/new">Create New Guitar</a>
     <br>
+    </body>

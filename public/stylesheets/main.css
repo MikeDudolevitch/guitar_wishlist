@@ -19,6 +19,12 @@
     line-height: 18px;
   }
 
+  .image600{
+    width:100%;
+    max-width:100px;
+}
+
+
   .wrapper {
     background: #fff;
     -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
