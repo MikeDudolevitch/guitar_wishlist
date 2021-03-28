@@ -1,22 +1,24 @@
 <link rel="stylesheet" href="/stylesheets/main.css" />
 <body>
 <% if @guitars.count < 1%><h1>Create Your First Guitar!</h1>
-<% else%><h1>Check Out Your Axes!</h1>
+<% else%><h2>Check Out Your Axes!</h2>
 <% end %>
-<ul>
+<br>
+<div>
 <% @guitars.each do |guitar| %>
-     
-    <li><%= guitar.maker.capitalize %></li>
-    <li><%= guitar.model.capitalize %></li>
-    <li><%= guitar.color.capitalize %></li>
-    <li><%= guitar.year_created %></li>
+    <h3><%= guitar.color.capitalize %> <%= guitar.year_created %> <%= guitar.maker.titleize %> <%= guitar.model.titleize %></h3>
+  
     <img class="image600" src=<%= guitar.image_url %> alt="guitar image">
-    
+    <br>
+    <br>
     <a href="/guitars/<%=guitar.id%>/edit">Edit Guitar</a>
+    <br>
+    <br>
     <% end %>
-    </ul>
+    </div>
     <br>
     <br>
     <a href="/guitars/new">Create New Guitar</a>
     <br>
     </body>
+    <br>

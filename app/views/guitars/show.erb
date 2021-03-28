@@ -1,12 +1,11 @@
-    <ul>
-    <li><%= @guitar.maker.capitalize %></li>
-    <li><%= @guitar.model.capitalize %></li>
-    <li><%= @guitar.color.capitalize %></li>
-    <li><%= @guitar.year_created %></li>
-    <img src=<%= @guitar.image_url %> alt="guitar image">
-    </ul>
-    <a href="/guitars"> Back To Guitars </a> 
+    <div>
+    <%= guitar.color.capitalize %> <%= guitar.year_created %> <%= guitar.maker.capitalize %> <%= guitar.model.capitalize %>
 
+    <img src=<%= @guitar.image_url %> alt="guitar image">
+    </div>
+    <br>
+    <a href="/guitars"> Back To Guitars </a> 
+    <br>
     <form action="/guitars/<%= @guitar.id%>" method="post">
     <input type="hidden" name="_method" value="delete">
     <input type="submit" value="Delete">
