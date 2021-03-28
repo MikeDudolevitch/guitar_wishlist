@@ -1,8 +1,5 @@
 class UserController < ApplicationController
 
-    #sign_up FORM
-    #User.new(email: params[:email], password: params{:password})
-    #signip route POST (actually logs in)
     get '/signup' do
         redirect_if_already_logged_in
         erb :'users/new'

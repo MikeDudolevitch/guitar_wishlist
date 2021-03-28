@@ -13,12 +13,12 @@
     <input type="text" name="image_url" value="<%= @guitar.image_url %>">
     <br>
     <br>
-    <input type="submit" value="Edit">
+    <input type="submit" value="Update">
     </form>
     <br>
     <form action="/guitars/<%= @guitar.id%>" method="post">
     <input type="hidden" name="_method" value="delete">
-    <input type="submit" value="Delete">
+    <input type="submit" value="Delete Guitar">
     </form>
     <br>
     <a href="/guitars"> Back To Guitars </a>

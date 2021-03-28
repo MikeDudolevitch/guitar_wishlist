@@ -13,13 +13,22 @@ class GuitarController < ApplicationController
 
     post '/guitars' do
         redirect_if_not_logged_in
-        guitar = Guitar.new(maker: params[:maker], model: params[:model], color: params[:color], year_created: params[:year_created], image_url: params[:image_url])
+        photo_url = !params[:image_url].empty? ? params[:image_url] : "https://i.pinimg.com/originals/0b/0d/bc/0b0dbce265be5db9bf7061b4e8dc83f4.png"
+        guitar = Guitar.new(maker: params[:maker], model: params[:model], color: params[:color], year_created: params[:year_created], image_url: photo_url)
         guitar.user_id = current_user.id
-        if guitar.save
-            redirect '/guitars'
-        else
-            redirect '/guitars/new'
-        end
+    
+
+            if  guitar.save
+                redirect '/guitars'
+            else
+                redirect '/guitars/error'
+            end
+
+            
+    end
+
+    get '/guitars/error' do
+        erb :'guitars/error'
     end
 
    get '/guitars/:id' do

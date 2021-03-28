@@ -1,18 +1,17 @@
 <link rel="stylesheet" href="/stylesheets/main.css" />
 <body>
-<% if @guitars.count < 1%><h1>Create Your First Guitar!</h1>
+<% if @guitars.count < 1%><h2>Create Your First Guitar!</h2>
 <% else%><h2>Check Out Your Axes!</h2>
 <% end %>
 <br>
 <div>
 <% @guitars.each do |guitar| %>
     <h3><%= guitar.color.capitalize %> <%= guitar.year_created %> <%= guitar.maker.titleize %> <%= guitar.model.titleize %></h3>
-  
-    <img class="image600" src=<%= guitar.image_url %> alt="guitar image">
+    <a href= "/guitars/<%=guitar.id%>"><img class="image600" src=<%= guitar.image_url %> alt="guitar image"></a>
     <br>
     <br>
     <a href="/guitars/<%=guitar.id%>/edit">Edit Guitar</a>
-    <br>
+    <br> 
     <br>
     <% end %>
     </div>
