@@ -1,10 +1,14 @@
     <div>
-    <%= @guitar.color.titleize %> <%= @guitar.year_created %> <%= @guitar.maker.titleize %> <%= @guitar.model.titleize %>
+    <h4><%= @guitar.color.titleize %> <%= @guitar.year_created %> <%= @guitar.maker.titleize %> <%= @guitar.model.titleize %></h4>
 
     <img src=<%= @guitar.image_url %> alt="guitar image">
     </div>
     <br>
+    <a href="/guitars/<%=@guitar.id%>/edit">Edit Guitar</a>
+    <br>
+    <br>
     <a href="/guitars"> Back To Guitars </a> 
+    <br>
     <br>
     <form action="/guitars/<%= @guitar.id%>" method="post">
     <input type="hidden" name="_method" value="delete">
