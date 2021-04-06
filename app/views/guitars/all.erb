@@ -1,0 +1,3 @@
+<% @guitars.each do |g| %>
+    <%= g.user ? g.user.email : "no user" %>
+<% end %>
