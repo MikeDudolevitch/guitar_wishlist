@@ -12,7 +12,6 @@ class SessionController < ApplicationController
             session[:user_id] = user.id
             redirect '/guitars'
         else 
-            #
             redirect '/login'
         end
     end

@@ -17,7 +17,7 @@ class GuitarController < ApplicationController
         @guitar = Guitar.new(maker: params[:maker], model: params[:model], color: params[:color], year_created: params[:year_created], image_url: photo_url)
         @guitar.user_id = current_user.id
 
-            if  guitar.save
+            if  @guitar.save
                 redirect '/guitars'
             else
                 redirect '/guitars/error'
